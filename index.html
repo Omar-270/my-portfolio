@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Omar Ahmed - Portfolio</title>
+  <title>Bitakati App - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #d9cfff, #a093e4);
-      color: #3f2e6e;
+      background: linear-gradient(135deg, #b08df0, #9c4dcc); /* لون أفتح للأرجواني */
+      color: #f0e9ff;
       scroll-behavior: smooth;
     }
     header {
-      background-color: rgba(138, 124, 190, 0.85);
+      background-color: rgba(123, 103, 193, 0.85);
       padding: 20px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -27,33 +27,18 @@
       font-weight: 600;
       font-size: 2.5rem;
       letter-spacing: 2px;
-      color: #4b3f87;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: #5e50a1;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #7e6ccf;
-      text-shadow: 0 0 6px #9b87d4;
     }
     section {
       max-width: 900px;
       margin: 50px auto;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(121, 100, 198, 0.6); /* الخلفية بألوان أفتح */
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(131, 113, 196, 0.2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
       opacity: 0;
       transform: translateY(30px);
       animation: fadeInUp 0.8s forwards;
-      color: #3f2e6e;
+      color: #f0e9ff;
     }
     section:nth-child(2) {
       animation-delay: 0.1s;
@@ -77,187 +62,59 @@
       letter-spacing: 1.5px;
       border-bottom: 2px solid #9b87d4;
       padding-bottom: 10px;
-      color: #5e50a1;
     }
-    .about p {
-      font-size: 1.15rem;
+    .app-image {
+      text-align: center;
+    }
+    .app-image img {
+      max-width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      margin-top: 20px;
+    }
+    .description {
+      font-size: 1.2rem;
       line-height: 1.6;
       text-align: center;
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
-    }
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      font-size: 1.1rem;
-    }
-    .skill {
-      background: #a093e4;
-      padding: 12px 25px;
-      border-radius: 25px;
-      box-shadow: 0 3px 10px rgba(160, 146, 255, 0.4);
-      transition: background 0.3s ease;
-      cursor: default;
-      color: #2f2166;
-      font-weight: 600;
-    }
-    .skill:hover {
-      background: #b7afff;
-      box-shadow: 0 5px 15px #c1bbff;
-    }
-    .projects {
-      display: flex;
-      flex-direction: column;
-      gap: 35px;
-    }
-    .project {
-      background: #c2bbf7;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(130, 120, 210, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: #4b3f87;
-    }
-    .project:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 25px rgba(130, 120, 210, 0.6);
-    }
-    .project h3 {
-      margin-top: 0;
-      font-weight: 600;
-      color: #4b3f87;
-    }
-    .project p {
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
-    .project img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-      margin-top: 10px;
-      display: block;
-    }
-    .contact {
-      text-align: center;
-      font-size: 1.2rem;
-      color: #4b3f87;
-    }
-    .contact a {
-      color: #5e50a1;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    .contact a:hover {
-      color: #7e6ccf;
-      text-shadow: 0 0 10px #b3a9ff;
+      margin-top: 30px;
     }
     footer {
       text-align: center;
       padding: 15px 10px;
       font-size: 0.9rem;
-      color: #6b5fa3;
+      color: #ccc;
       margin-top: 40px;
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      .skills-list {
-        flex-direction: column;
-        align-items: center;
-      }
-      section {
-        margin: 30px 15px;
-        padding: 20px;
-      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Omar Ahmed</h1>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Bitakati App</h1>
   </header>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate middle school student who has started exploring the tech field through a Ministry of Communications scholarship. I am enthusiastic about programming, data analysis, mobile app development, cybersecurity, digital art, and web development. I learn quickly, work well under pressure, and am eager to specialize and grow in the tech industry.
-    </p>
-  </section>
+  <section>
+    <h2>Bitakati Mobile App</h2>
 
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill">Programming Basics</div>
-      <div class="skill">Data Analysis (Cisco App)</div>
-      <div class="skill">Cybersecurity (Kali Linux basics)</div>
-      <div class="skill">Digital Art (Adobe Express)</div>
-      <div class="skill">Web Development (HTML, CSS)</div>
-      <div class="skill">Mobile App Development (Flutter)</div>
-      <div class="skill">VS Code</div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Bitakati App (Mobile App)</h3>
-      <p>A mobile app project started using Flutter. Currently in development phase with basic UI and functionalities.</p>
+    <!-- Image of the app -->
+    <div class="app-image">
       <img src="image/ggggggggggggggggggggggggggggggggggggggggggggggggg.png" alt="Bitakati App Screenshot" />
     </div>
 
-    <div class="project">
-      <h3>Jnnaty Web Page</h3>
-      <p>A beginner-level web page created using HTML and CSS. It presents ice cream flavors and customer reviews.</p>
-      <img src="image/screenshot of the webpage.png" alt="Jnnaty Web Page Screenshot" />
+    <!-- Description of the app -->
+    <div class="description">
+      <p>
+        This is a mobile application developed using Flutter. It showcases a simple and intuitive interface to help users manage their tasks effectively. The app includes features such as task creation, editing, and deletion, as well as the ability to categorize tasks.
+      </p>
+      <p>
+        The app is still in the development phase, but it showcases the power of Flutter in creating cross-platform mobile applications with a smooth and responsive design.
+      </p>
     </div>
-
-    <div class="project">
-      <h3>Ice Cream Data Analysis</h3>
-      <p>Data analysis done using Cisco platform to find patterns in ice cream sales and customer preferences.</p>
-      <img src="image/jjjjjjjjjjjjj.png.png" alt="Ice Cream Data Analysis Screenshot" />
-    </div>
-
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:omarahmed2011728@gmail.com">omarahmed2011728@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/omar-ahmed-36085033b/" target="_blank" rel="noopener">omar-ahmed-36085033b</a></p>
   </section>
 
   <footer>
     &copy; 2025 Omar Ahmed. All rights reserved.
   </footer>
-
-  <script>
-    // Animate sections on scroll
-    const sections = document.querySelectorAll('section');
-    const options = {
-      threshold: 0.15
-    };
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
